@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  mySQL:
+      image: mysql:latest
+      restart: always
+      container_name: mydb
+      environment:
+        - MYSQL_DATABASE=mydb
+        - MYSQL_ROOT_PASSWORD=root
+      ports:
+        - 3307:3306
+      volumes:
+        - volume_mysql:/var/lib/mysql
+
+  backendservice:
+    image: aldomoreirav/backendso1:latest
+    container_name: mybackend
+    privileged: true
+    pid: host
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mySQL
+    links:
+      - mySQL
+    volumes:
+      - type: bind
+        source: /proc
+        target: /proc
+
+  frontendservice:
+    image: aldomoreirav/frontendso1:latest
+    container_name: myfrontend
+    restart: always
+    ports:
+      - 80:80
+  
+volumes:
+  volume_mysql:
+
+      

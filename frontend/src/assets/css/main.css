@@ -1,0 +1,86 @@
+/* Main */
+.main-container {
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.main-container__title {
+    text-align: center;
+}
+
+/* Tree */
+
+
+/* Charts */
+.chart-container {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-gap: 10px;
+}
+
+.chart-container__titles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.chart-container__titles h3 {
+    text-align: center;
+}
+
+.chart-container__elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.ram-container, .cpu-container {
+    height: 500px;
+    width: 100%;
+}
+
+/* Diagrama de estodos */
+
+.process-container {
+    margin: 25px;
+    height: 50px;
+}
+
+.process-container__options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-container__inputbox{
+    margin-right: 5px;
+    height: 50px;
+}
+
+.process-container__input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.process-container__graph {
+    display: flex;
+    justify-content: center;
+    margin: 2dvi;
+    border: 3px solid #000;
+    border-radius: 20px;
+}
+
+.process-container__diagram {
+    display: flex;
+    justify-content: center;
+    margin: 2dvi;
+    border: 3px solid #000;
+    border-radius: 20px;
+}
